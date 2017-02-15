@@ -21,12 +21,12 @@ class QuotePhotoManager: NSObject {
     
     func getRandomQoute(completionHandler:@escaping (QuoteModel)->Void) {
         
-        let url = URL(fileURLWithPath: "http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json")
+        let url = URL(string: "http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json")
 //        let request = URLRequest(url: url)
         let sessionConfiguration = URLSessionConfiguration.default
         let session = URLSession(configuration:sessionConfiguration)
         
-        let dataTask = session.dataTask(with: url) { (data:Data?, response:URLResponse?, error:Error?) in
+        let dataTask = session.dataTask(with: url!) { (data:Data?, response:URLResponse?, error:Error?) in
             
             guard let data = data else {
                 print("no data returned from server \(error?.localizedDescription)")

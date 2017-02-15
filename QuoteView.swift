@@ -17,7 +17,7 @@ class QuoteView: UIView {
     
     
     @IBAction func randomImage(_ sender: UIButton) {
-        
+        self.quoteImage.sd_setImage(with: URL(string: "http://lorempixel.com/200/300"))
     }
     
     @IBAction func randomQuote(_ sender: UIButton) {
@@ -25,7 +25,7 @@ class QuoteView: UIView {
         manager.getRandomQoute {[unowned self] (quoteModel:QuoteModel) in
             DispatchQueue.main.async {
                 self.quoteLabel.text = quoteModel.quote
-                self.quoteLabel.text = quoteModel.author
+                self.authorLabel.text = quoteModel.author
             }
         }
     }
