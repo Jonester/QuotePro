@@ -8,20 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		3C6371F71E54B83300F0E278 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6371F61E54B83300F0E278 /* AppDelegate.swift */; };
-		3C6371F91E54B83300F0E278 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6371F81E54B83300F0E278 /* ViewController.swift */; };
 		3C6371FC1E54B83300F0E278 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C6371FA1E54B83300F0E278 /* Main.storyboard */; };
 		3C6371FE1E54B83300F0E278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C6371FD1E54B83300F0E278 /* Assets.xcassets */; };
 		3C6372011E54B83300F0E278 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C6371FF1E54B83300F0E278 /* LaunchScreen.storyboard */; };
+		3C63720D1E54BBD400F0E278 /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C63720C1E54BBD400F0E278 /* QuoteView.swift */; };
+		3C63720F1E54BBDD00F0E278 /* QuoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C63720E1E54BBDD00F0E278 /* QuoteView.xib */; };
+		3C6372111E54CBB000F0E278 /* QuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6372101E54CBB000F0E278 /* QuoteViewController.swift */; };
+		3C6372131E54CFCA00F0E278 /* MasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6372121E54CFCA00F0E278 /* MasterTableViewController.swift */; };
+		3C6372151E54D01500F0E278 /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6372141E54D01500F0E278 /* QuoteModel.swift */; };
+		3C6372171E54D02400F0E278 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6372161E54D02400F0E278 /* PhotoModel.swift */; };
+		3C63721A1E54D10000F0E278 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6372181E54D10000F0E278 /* CustomTableViewCell.swift */; };
+		3C63721B1E54D10000F0E278 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C6372191E54D10000F0E278 /* CustomTableViewCell.xib */; };
+		3C63721D1E54D2BE00F0E278 /* QuotePhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C63721C1E54D2BE00F0E278 /* QuotePhotoManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3C6371F31E54B83300F0E278 /* QuotePro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuotePro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C6371F61E54B83300F0E278 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3C6371F81E54B83300F0E278 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3C6371FB1E54B83300F0E278 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C6371FD1E54B83300F0E278 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C6372001E54B83300F0E278 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C6372021E54B83300F0E278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C63720C1E54BBD400F0E278 /* QuoteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuoteView.swift; path = ../QuoteView.swift; sourceTree = "<group>"; };
+		3C63720E1E54BBDD00F0E278 /* QuoteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuoteView.xib; path = ../QuoteView.xib; sourceTree = "<group>"; };
+		3C6372101E54CBB000F0E278 /* QuoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteViewController.swift; sourceTree = "<group>"; };
+		3C6372121E54CFCA00F0E278 /* MasterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterTableViewController.swift; sourceTree = "<group>"; };
+		3C6372141E54D01500F0E278 /* QuoteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
+		3C6372161E54D02400F0E278 /* PhotoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
+		3C6372181E54D10000F0E278 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		3C6372191E54D10000F0E278 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		3C63721C1E54D2BE00F0E278 /* QuotePhotoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotePhotoManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +71,15 @@
 			isa = PBXGroup;
 			children = (
 				3C6371F61E54B83300F0E278 /* AppDelegate.swift */,
-				3C6371F81E54B83300F0E278 /* ViewController.swift */,
+				3C63720C1E54BBD400F0E278 /* QuoteView.swift */,
+				3C63720E1E54BBDD00F0E278 /* QuoteView.xib */,
+				3C6372181E54D10000F0E278 /* CustomTableViewCell.swift */,
+				3C6372191E54D10000F0E278 /* CustomTableViewCell.xib */,
+				3C6372101E54CBB000F0E278 /* QuoteViewController.swift */,
+				3C6372121E54CFCA00F0E278 /* MasterTableViewController.swift */,
+				3C63721C1E54D2BE00F0E278 /* QuotePhotoManager.swift */,
+				3C6372141E54D01500F0E278 /* QuoteModel.swift */,
+				3C6372161E54D02400F0E278 /* PhotoModel.swift */,
 				3C6371FA1E54B83300F0E278 /* Main.storyboard */,
 				3C6371FD1E54B83300F0E278 /* Assets.xcassets */,
 				3C6371FF1E54B83300F0E278 /* LaunchScreen.storyboard */,
@@ -126,6 +150,8 @@
 				3C6372011E54B83300F0E278 /* LaunchScreen.storyboard in Resources */,
 				3C6371FE1E54B83300F0E278 /* Assets.xcassets in Resources */,
 				3C6371FC1E54B83300F0E278 /* Main.storyboard in Resources */,
+				3C63721B1E54D10000F0E278 /* CustomTableViewCell.xib in Resources */,
+				3C63720F1E54BBDD00F0E278 /* QuoteView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +162,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C6371F91E54B83300F0E278 /* ViewController.swift in Sources */,
+				3C6372171E54D02400F0E278 /* PhotoModel.swift in Sources */,
+				3C6372151E54D01500F0E278 /* QuoteModel.swift in Sources */,
+				3C6372111E54CBB000F0E278 /* QuoteViewController.swift in Sources */,
+				3C63721A1E54D10000F0E278 /* CustomTableViewCell.swift in Sources */,
+				3C6372131E54CFCA00F0E278 /* MasterTableViewController.swift in Sources */,
+				3C63721D1E54D2BE00F0E278 /* QuotePhotoManager.swift in Sources */,
+				3C63720D1E54BBD400F0E278 /* QuoteView.swift in Sources */,
 				3C6371F71E54B83300F0E278 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

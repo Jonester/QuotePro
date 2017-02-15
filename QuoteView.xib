@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="QuoteView" customModule="QuotePro" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dK7-e0-KX9">
+                    <rect key="frame" x="20" y="597" width="115" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Random Quote"/>
+                    <connections>
+                        <action selector="randomQuote:" destination="iN0-l3-epB" eventType="touchUpInside" id="gIl-gs-wbr"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7d-9C-aEa">
+                    <rect key="frame" x="244" y="597" width="115" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Random Image"/>
+                    <connections>
+                        <action selector="randomImage:" destination="iN0-l3-epB" eventType="touchUpInside" id="H7M-WA-jIw"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cY2-c9-fuX">
+                    <rect key="frame" x="10" y="20" width="355" height="333.5"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3nt-Ja-3up">
+                            <rect key="frame" x="0.0" y="0.0" width="355" height="333.5"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hj2-OX-i9y">
+                            <rect key="frame" x="20" y="263.5" width="315" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="xLL-yY-eE4"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2r-1W-RB8">
+                            <rect key="frame" x="20" y="90" width="315" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="YaF-jz-t7B"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="3nt-Ja-3up" secondAttribute="trailing" id="6Ed-bH-c5x"/>
+                        <constraint firstAttribute="trailing" secondItem="g2r-1W-RB8" secondAttribute="trailing" constant="20" id="Bk6-h4-99a"/>
+                        <constraint firstAttribute="bottom" secondItem="Hj2-OX-i9y" secondAttribute="bottom" constant="30" id="BrV-IO-Nzt"/>
+                        <constraint firstItem="g2r-1W-RB8" firstAttribute="top" secondItem="cY2-c9-fuX" secondAttribute="top" constant="90" id="Fom-ng-EaX"/>
+                        <constraint firstItem="3nt-Ja-3up" firstAttribute="leading" secondItem="cY2-c9-fuX" secondAttribute="leading" id="Ixp-Sw-6mQ"/>
+                        <constraint firstAttribute="trailing" secondItem="Hj2-OX-i9y" secondAttribute="trailing" constant="20" id="b89-Hu-dwY"/>
+                        <constraint firstItem="Hj2-OX-i9y" firstAttribute="leading" secondItem="cY2-c9-fuX" secondAttribute="leading" constant="20" id="fMS-GW-ln1"/>
+                        <constraint firstAttribute="bottom" secondItem="3nt-Ja-3up" secondAttribute="bottom" id="knd-I0-DxO"/>
+                        <constraint firstItem="g2r-1W-RB8" firstAttribute="leading" secondItem="cY2-c9-fuX" secondAttribute="leading" constant="20" id="lCA-gQ-4qt"/>
+                        <constraint firstItem="3nt-Ja-3up" firstAttribute="top" secondItem="cY2-c9-fuX" secondAttribute="top" id="vGS-Xm-MpB"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="cY2-c9-fuX" secondAttribute="trailing" constant="10" id="AuX-gR-uei"/>
+                <constraint firstItem="cY2-c9-fuX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="eNj-p4-r5D"/>
+                <constraint firstItem="cY2-c9-fuX" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.5" id="sHv-EZ-NPf"/>
+                <constraint firstItem="cY2-c9-fuX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="vCY-fl-5gQ"/>
+            </constraints>
+            <connections>
+                <outlet property="authorLabel" destination="Hj2-OX-i9y" id="gqT-qF-TAi"/>
+                <outlet property="baseView" destination="cY2-c9-fuX" id="OLA-Tb-RuT"/>
+                <outlet property="quoteImage" destination="3nt-Ja-3up" id="6gZ-3b-ymh"/>
+                <outlet property="quoteLabel" destination="g2r-1W-RB8" id="f3m-WW-34i"/>
+            </connections>
+            <point key="canvasLocation" x="31.5" y="108.5"/>
+        </view>
+    </objects>
+</document>
