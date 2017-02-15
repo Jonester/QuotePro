@@ -91,8 +91,8 @@
 				3C63720E1E54BBDD00F0E278 /* QuoteView.xib */,
 				3C6372181E54D10000F0E278 /* CustomTableViewCell.swift */,
 				3C6372191E54D10000F0E278 /* CustomTableViewCell.xib */,
-				3C6372101E54CBB000F0E278 /* QuoteViewController.swift */,
 				3C6372121E54CFCA00F0E278 /* MasterTableViewController.swift */,
+				3C6372101E54CBB000F0E278 /* QuoteViewController.swift */,
 				3C63721C1E54D2BE00F0E278 /* QuotePhotoManager.swift */,
 				3C6372141E54D01500F0E278 /* QuoteModel.swift */,
 				3C6372161E54D02400F0E278 /* PhotoModel.swift */,
@@ -406,6 +406,7 @@
 				3C6372071E54B83300F0E278 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

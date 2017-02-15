@@ -10,4 +10,9 @@ import UIKit
 
 class PhotoModel: NSObject {
 
+    var quoteImage:UIImage
+    
+    init(quoteImage:UIImage) {
+        self.quoteImage = quoteImage
+    }
 }

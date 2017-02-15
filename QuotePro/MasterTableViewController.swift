@@ -33,7 +33,7 @@ class MasterTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 10
+        return QuotePhotoManager.sharedInstance.quotes.count
     }
     
     
@@ -43,7 +43,8 @@ class MasterTableViewController: UITableViewController {
             fatalError()
         }
         
-        
+        let quote = QuotePhotoManager.sharedInstance.quotes[indexPath.row]
+        cell .displayCell(quote: quote)
         cell.quoteLabel.text = "index \(indexPath.item)"
         
         return cell
@@ -56,6 +57,17 @@ class MasterTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
+    
+    // MARK: - Navigation
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let qvc = segue.destination as? QuoteViewController else {
+//            fatalError()
+//        }
+//        
+//            
+//        }
+//    }
     
     
     /*
@@ -93,14 +105,5 @@ class MasterTableViewController: UITableViewController {
      }
      */
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }

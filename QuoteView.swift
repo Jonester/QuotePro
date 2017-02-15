@@ -17,7 +17,19 @@ class QuoteView: UIView {
     
     
     @IBAction func randomImage(_ sender: UIButton) {
-        self.quoteImage.sd_setImage(with: URL(string: "http://lorempixel.com/200/300"))
+        if quoteImage.image != nil {
+            quoteImage.image = nil
+        }
+        
+        if let url = URL(string: "http://lorempixel.com/200/300/nature") {
+        
+            do {
+                let data = try Data(contentsOf: url)
+                self.quoteImage.image = UIImage(data: data)
+            } catch  {
+                print("Error")
+            }
+        }
     }
     
     @IBAction func randomQuote(_ sender: UIButton) {

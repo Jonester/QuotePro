@@ -10,11 +10,10 @@ import UIKit
 
 class QuotePhotoManager: NSObject {
     
-//    var myProperty: String {
-//        didSet {
-//            
-//        }
-//    }
+    static let sharedInstance: QuotePhotoManager = {
+        let instance = QuotePhotoManager()
+        return instance
+    }()
 
     var photos = [PhotoModel]()
     var quotes = [QuoteModel]()
@@ -22,11 +21,11 @@ class QuotePhotoManager: NSObject {
     func getRandomQoute(completionHandler:@escaping (QuoteModel)->Void) {
         
         let url = URL(string: "http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json")
-//        let request = URLRequest(url: url)
+        let request = URLRequest(url: url!)
         let sessionConfiguration = URLSessionConfiguration.default
         let session = URLSession(configuration:sessionConfiguration)
         
-        let dataTask = session.dataTask(with: url!) { (data:Data?, response:URLResponse?, error:Error?) in
+        let dataTask = session.dataTask(with: request) { (data:Data?, response:URLResponse?, error:Error?) in
             
             guard let data = data else {
                 print("no data returned from server \(error?.localizedDescription)")
@@ -62,12 +61,14 @@ class QuotePhotoManager: NSObject {
             let quoteAuthor = json["quoteAuthor"] ?? "Anonymous"
             
             let quote = QuoteModel(quote: quoteText, author:quoteAuthor)
+            self.quotes.append(quote)
             
-            
-//            quotes.append(quote)
             completionHandler(quote)
         }
         dataTask.resume()
     }
     
+//    func getRandomPhoto {
+//        let image = UIImage(data: self.quoteImage.sd_setImage(with: URL(string: "http://lorempixel.com/200/300/nature")))
+//    }
 }
