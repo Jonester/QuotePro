@@ -10,4 +10,12 @@ import UIKit
 
 class QuoteModel: NSObject {
 
+    var quote: String
+    var author: String
+ 
+    init(quote:String, author:String) {
+        self.quote = quote
+        self.author = author
+    }
+    
 }

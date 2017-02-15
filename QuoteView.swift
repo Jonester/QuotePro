@@ -9,16 +9,24 @@
 import UIKit
 
 class QuoteView: UIView {
+    
     @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var quoteImage: UIImageView!
     @IBOutlet weak var baseView: UIView!
-
+    
+    
     @IBAction func randomImage(_ sender: UIButton) {
         
     }
     
     @IBAction func randomQuote(_ sender: UIButton) {
-        
+        let manager = QuotePhotoManager()
+        manager.getRandomQoute {[unowned self] (quoteModel:QuoteModel) in
+            DispatchQueue.main.async {
+                self.quoteLabel.text = quoteModel.quote
+                self.quoteLabel.text = quoteModel.author
+            }
+        }
     }
 }

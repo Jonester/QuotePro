@@ -10,15 +10,15 @@ import UIKit
 
 class QuoteViewController: UIViewController {
 
-    var quoteView:QuoteView!
-    
     @IBOutlet var mainView: UIView!
     
+    var quoteView:QuoteView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         quoteView = Bundle.main.loadNibNamed("QuoteView", owner: self, options: nil)!.first as! QuoteView
         view.addSubview(quoteView)
+        
     }
 
 }
