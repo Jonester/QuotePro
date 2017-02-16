@@ -16,12 +16,13 @@ class MasterTableViewController: UITableViewController {
         
         let nib = UINib(nibName: "CustomTableViewCell", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: "nibCell")
+        self.tableView.rowHeight = UITableViewAutomaticDimension;
+        self.tableView.estimatedRowHeight = 120;
         
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
     }
     
     // MARK: - Table view data source
@@ -44,18 +45,10 @@ class MasterTableViewController: UITableViewController {
         }
         
         let quote = QuotePhotoManager.sharedInstance.quotes[indexPath.row]
-        cell .displayCell(quote: quote)
-        cell.quoteLabel.text = "index \(indexPath.item)"
+    
+        cell.displayCell(quote: quote)
         
         return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
     }
     
     // MARK: - Navigation

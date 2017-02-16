@@ -19,6 +19,11 @@ class QuoteViewController: UIViewController {
         quoteView = Bundle.main.loadNibNamed("QuoteView", owner: self, options: nil)!.first as! QuoteView
         view.addSubview(quoteView)
         
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backTapped))
+    }
+    
+    func backTapped(sender: UIBarButtonItem) {
+        navigationController?.popViewController(animated: true)
     }
 
 }
