@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="384" height="148"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="384" height="147.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="384" height="148"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="isx-mL-S0f">
@@ -47,12 +47,13 @@
                     <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="ixu-bE-Tu6" secondAttribute="bottom" constant="8" id="19o-FV-2MI"/>
                     <constraint firstItem="isx-mL-S0f" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="1Fp-uQ-OqY"/>
                     <constraint firstItem="bBr-fv-AdW" firstAttribute="leading" secondItem="isx-mL-S0f" secondAttribute="trailing" constant="8" id="6CT-zP-GDh"/>
+                    <constraint firstItem="isx-mL-S0f" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="8tK-HA-GrX"/>
                     <constraint firstAttribute="trailingMargin" secondItem="bBr-fv-AdW" secondAttribute="trailing" id="A62-05-yhn"/>
                     <constraint firstItem="bBr-fv-AdW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="IlA-Vc-xPk"/>
                     <constraint firstItem="ixu-bE-Tu6" firstAttribute="leading" secondItem="isx-mL-S0f" secondAttribute="trailing" constant="8" id="VtR-gz-TCO"/>
-                    <constraint firstItem="isx-mL-S0f" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="emd-r2-eSA"/>
                     <constraint firstAttribute="trailingMargin" secondItem="ixu-bE-Tu6" secondAttribute="trailing" id="hH6-dT-kn7"/>
                     <constraint firstItem="ixu-bE-Tu6" firstAttribute="top" secondItem="bBr-fv-AdW" secondAttribute="bottom" constant="8" id="pqg-Nd-Jm1"/>
+                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="isx-mL-S0f" secondAttribute="bottom" constant="2" id="sUQ-7c-PeD"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>

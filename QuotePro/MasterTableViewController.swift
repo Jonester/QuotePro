@@ -17,8 +17,8 @@ class MasterTableViewController: UITableViewController {
         let nib = UINib(nibName: "CustomTableViewCell", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: "nibCell")
         self.tableView.rowHeight = UITableViewAutomaticDimension;
-        self.tableView.estimatedRowHeight = 120;
-        
+        self.tableView.estimatedRowHeight = 130;
+        self.tableView.rowHeight >= 130;
     }
     
     override func viewWillAppear(_ animated: Bool) {
