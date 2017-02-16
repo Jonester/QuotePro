@@ -23,9 +23,10 @@ class CustomTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func displayCell (quote:QuoteModel){
+    func displayCell (quote:QuoteModel, photo:PhotoModel){
         quoteLabel.text = quote.quote
         authorLabel.text = quote.author
+        quoteImage.image = photo.quoteImage
     }
     
 }

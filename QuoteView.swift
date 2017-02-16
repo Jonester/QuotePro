@@ -14,25 +14,16 @@ class QuoteView: UIView {
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var quoteImage: UIImageView!
     @IBOutlet weak var baseView: UIView!
-
+    
     var quote: QuoteModel?
     var photo: PhotoModel?
     
-//    var quoteInstance = QuoteModel()
-//    var photoInstance = PhotoModel()
-    
     @IBAction func randomImage(_ sender: UIButton) {
-        
-        if let url = URL(string: "http://lorempixel.com/200/300/nature") {
-        
-            do {
-                let data = try Data(contentsOf: url)
-                self.quoteImage.image = UIImage(data: data)
-                if let image = self.quoteImage.image {
-                    photo = PhotoModel(quoteImage: image)
-                }
-            } catch  {
-                print("Error")
+      let manager = QuotePhotoManager()
+        manager.getRandomPhoto {[unowned self] (photoModel:PhotoModel) in
+            DispatchQueue.main.async {
+                self.quoteImage.image = photoModel.quoteImage
+                self.photo = photoModel
             }
         }
     }
@@ -52,10 +43,10 @@ class QuoteView: UIView {
         guard let quote = quote else { return }
         
         QuotePhotoManager.sharedInstance.quotes.append(quote)
-    
-
-    guard let photo = photo else {return}
+        
+        
+        guard let photo = photo else {return}
         QuotePhotoManager.sharedInstance.photos.append(photo)
-
+        
     }
 }

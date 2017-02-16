@@ -12,28 +12,29 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="120" id="KGk-i7-Jjw" customClass="CustomTableViewCell" customModule="QuotePro" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="384" height="120"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="148" id="KGk-i7-Jjw" customClass="CustomTableViewCell" customModule="QuotePro" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="384" height="148"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="384" height="120"/>
+                <rect key="frame" x="0.0" y="0.0" width="384" height="147.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="isx-mL-S0f">
-                        <rect key="frame" x="8" y="8" width="120" height="104"/>
+                        <rect key="frame" x="8" y="8" width="130" height="130"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="120" id="5XP-gp-U6R"/>
+                            <constraint firstAttribute="width" constant="130" id="5XP-gp-U6R"/>
+                            <constraint firstAttribute="height" constant="130" id="AsK-cy-9A1"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBr-fv-AdW">
-                        <rect key="frame" x="136" y="8" width="240" height="20.5"/>
+                        <rect key="frame" x="146" y="8" width="230" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixu-bE-Tu6">
-                        <rect key="frame" x="136" y="36.5" width="240" height="40"/>
+                        <rect key="frame" x="146" y="36.5" width="230" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="ZMN-aJ-wNw"/>
                         </constraints>
@@ -49,7 +50,6 @@
                     <constraint firstAttribute="trailingMargin" secondItem="bBr-fv-AdW" secondAttribute="trailing" id="A62-05-yhn"/>
                     <constraint firstItem="bBr-fv-AdW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="IlA-Vc-xPk"/>
                     <constraint firstItem="ixu-bE-Tu6" firstAttribute="leading" secondItem="isx-mL-S0f" secondAttribute="trailing" constant="8" id="VtR-gz-TCO"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="isx-mL-S0f" secondAttribute="bottom" id="Wmu-V6-obT"/>
                     <constraint firstItem="isx-mL-S0f" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="emd-r2-eSA"/>
                     <constraint firstAttribute="trailingMargin" secondItem="ixu-bE-Tu6" secondAttribute="trailing" id="hH6-dT-kn7"/>
                     <constraint firstItem="ixu-bE-Tu6" firstAttribute="top" secondItem="bBr-fv-AdW" secondAttribute="bottom" constant="8" id="pqg-Nd-Jm1"/>
@@ -61,7 +61,7 @@
                 <outlet property="quoteImage" destination="isx-mL-S0f" id="lb3-LD-82A"/>
                 <outlet property="quoteLabel" destination="bBr-fv-AdW" id="rJn-Sz-cFq"/>
             </connections>
-            <point key="canvasLocation" x="23" y="34"/>
+            <point key="canvasLocation" x="23" y="48"/>
         </tableViewCell>
     </objects>
 </document>

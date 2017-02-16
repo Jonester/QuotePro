@@ -14,7 +14,7 @@ class QuotePhotoManager: NSObject {
         let instance = QuotePhotoManager()
         return instance
     }()
-
+    
     var photos = [PhotoModel]()
     var quotes = [QuoteModel]()
     
@@ -46,7 +46,7 @@ class QuotePhotoManager: NSObject {
             var jsonObject:[String: String]?
             
             do {
-               jsonObject = try JSONSerialization.jsonObject(with: data) as? Dictionary<String, String>
+                jsonObject = try JSONSerialization.jsonObject(with: data) as? Dictionary<String, String>
             }
             catch {
                 print(#line, error.localizedDescription)
@@ -68,7 +68,37 @@ class QuotePhotoManager: NSObject {
         dataTask.resume()
     }
     
-//    func getRandomPhoto {
-//        let image = UIImage(data: self.quoteImage.sd_setImage(with: URL(string: "http://lorempixel.com/200/300/nature")))
-//    }
+    func getRandomPhoto(completionHandler:@escaping (PhotoModel)->Void) {
+        
+        let url = URL(string: "http://lorempixel.com/200/300/nature")
+        let request = URLRequest(url: url!)
+        let sessionConfiguration = URLSessionConfiguration.default
+        let session = URLSession(configuration:sessionConfiguration)
+        
+        
+        let dataTask = session.dataTask(with: request) { (data:Data?, response:URLResponse?, error:Error?) in
+            
+            guard let data = data else {
+                print("no data returned from server \(error?.localizedDescription)")
+                return
+            }
+            guard let resp = response as? HTTPURLResponse else {
+                print("no response returned from server \(error)")
+                return
+            }
+            
+            guard resp.statusCode == 200 else {
+                // handle error
+                print("an error occurred with status code \(resp.statusCode)")
+                return
+            }
+            
+            let photo = PhotoModel(quoteImage: UIImage(data: data)!)
+            self.photos.append(photo)
+            
+            completionHandler(photo)
+        }
+        dataTask.resume()
+    }
 }
+

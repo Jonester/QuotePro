@@ -45,8 +45,9 @@ class MasterTableViewController: UITableViewController {
         }
         
         let quote = QuotePhotoManager.sharedInstance.quotes[indexPath.row]
+        let photo = QuotePhotoManager.sharedInstance.photos[indexPath.row]
     
-        cell.displayCell(quote: quote)
+        cell.displayCell(quote: quote, photo: photo)
         
         return cell
     }
