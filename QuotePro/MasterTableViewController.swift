@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SDWebImage
 
 class MasterTableViewController: UITableViewController {
     
@@ -18,7 +17,7 @@ class MasterTableViewController: UITableViewController {
         self.tableView.register(nib, forCellReuseIdentifier: "nibCell")
         self.tableView.rowHeight = UITableViewAutomaticDimension;
         self.tableView.estimatedRowHeight = 130;
-        self.tableView.rowHeight >= 130;
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,7 +36,6 @@ class MasterTableViewController: UITableViewController {
         return QuotePhotoManager.sharedInstance.quotes.count
     }
     
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "nibCell", for: indexPath) as? CustomTableViewCell else {
@@ -52,6 +50,16 @@ class MasterTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let activityItem = [QuotePhotoManager.sharedInstance.photos[indexPath.row]]
+        let activityViewController = UIActivityViewController(activityItems: activityItem, applicationActivities: nil)
+        activityViewController.excludedActivityTypes = [UIActivityType.airDrop, UIActivityType.postToFacebook, UIActivityType.openInIBooks, UIActivityType.assignToContact, UIActivityType.print]
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        self.present(activityViewController, animated: true, completion: nil)
+    }
+    
+}
     // MARK: - Navigation
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -98,6 +106,3 @@ class MasterTableViewController: UITableViewController {
      return true
      }
      */
-    
-    
-}
